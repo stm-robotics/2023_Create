@@ -1,5 +1,5 @@
 #include <kipr/wombat.h>
-//#include <Theresa.h>
+#include <Flipper.h>
 // step 2 of proccess flow.
 // drive foreward until black (keep track of clicks)
 // step 3 of proccess flow
@@ -16,8 +16,6 @@
 // flipper right
 // step 9 of proccess flow
 // line follow
-void moveFlipperLeft();
-void moveFlipperRight();
 void getfirstpoms(int speed);
 
 const int THRESHOLD = 3400;
@@ -25,19 +23,17 @@ const int TOPHAT = 0;
 const int RIGHTMOTOR = 0;
 const int LEFTMOTOR = 1;
 int Nclick; //Nclick is the amount we move foreward and back 
-int Mclicks=450; // Mclick is moving right slightly
-int Cclicks=1100; // Cclick is moving right 90 deg
+int Mclicks=350; // Mclick is moving right slightly
+int Cclicks=800; // Cclick is moving right 90 deg
 void getfirstpoms(int speed)
 {
-    enable_servos();
-    moveFlipperRight();
-    //debugPrint("Getting first poms...");
+    debugPrint("Getting first poms...");
     // Clear left motor possition 
     cmpc(LEFTMOTOR);
     // Move foreward untill back
     while (analog(TOPHAT)<THRESHOLD)
     {
-       //printf("Tophat=%i\n",analog(TOPHAT));
+        printf("Tophat=%i\n",analog(TOPHAT));
         mav(RIGHTMOTOR, speed);
         mav(LEFTMOTOR, speed);  
     }
@@ -80,16 +76,16 @@ void getfirstpoms(int speed)
    // Turning right Cclicks
     cmpc(LEFTMOTOR);
     while (gmpc(LEFTMOTOR) < Cclicks)
-    //while (analog(TOPHAT)<THRESHOLD)
         {
         mav(RIGHTMOTOR, -speed);
         mav(LEFTMOTOR, speed);  
         }
-        
      ao();
     moveFlipperRight();
     ao();
 }
+// gmpc(moter port)
+// cmpc(moter port)
 
 
      
