@@ -19,6 +19,6 @@ int main()
     moveFlipperRight();
     getfirstpoms(speed);
   	pickuppoms(speed);
-     
+   
     return 0;
 }
