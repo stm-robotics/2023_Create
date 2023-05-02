@@ -1,6 +1,6 @@
 const int FLIPPER_PORT = 0;
-const int FLIPPER_LEFT = 1600;
-const int FLIPPER_RIGHT = 400;
+const int FLIPPER_LEFT = 1570;
+const int FLIPPER_RIGHT = 417;
 
 void moveFlipperLeft();
 void moveFlipperRight();
