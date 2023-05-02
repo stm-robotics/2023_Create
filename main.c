@@ -13,12 +13,14 @@ const int speed=900;
 void getfirstpoms(int speed);
 void moveFlipperRight();
 void pickuppoms(int speed);
+void pomsweep(int LM, int RM);
+
 int main()
 { 
     enable_servos();
     moveFlipperRight();
     getfirstpoms(speed);
   	pickuppoms(speed);
-   
+    pomsweep(LM,RM);
     return 0;
 }

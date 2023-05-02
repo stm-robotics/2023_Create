@@ -2,12 +2,12 @@ void pickuppoms();
 const int Tpp=0;
 const int clicks1=1800;
 const int clicks2=4000;
-const int clicks3=6800;
-const int clicks4=9000;
-const int clicks5=12000;
-const int clicks6=17250;
+const int clicks3=6500;
+const int clicks4=8000;
+const int clicks5=11500;
+const int clicks6=13250;
 
-const int sleeptime= 500;
+const int sleeptime= 0;
 //const int Speed=300;
 const int Rmp=0;
 const int Lmp=1;   
